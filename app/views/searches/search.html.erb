@@ -1,0 +1,9 @@
+<%= stylesheet_link_tag('search') %>
+<%= javascript_include_tag('sonic','main','pagination') %>
+<%= render 'header' %>
+<div class="container" id="container">
+  <%= render 'search_form' %>
+  <script type="text/javascript" charset="utf-8">
+    initPage("<%= @amazon.force_encoding('utf-8').html_safe %>",<%= @totalPage%>,"<%=@searchword.html_safe%>");
+  </script>
+</div>

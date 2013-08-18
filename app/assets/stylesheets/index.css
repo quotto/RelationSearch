@@ -1,0 +1,22 @@
+div.howtoMainContainer {
+    margin-top:100px;
+    width:80%;
+}
+
+small#howto {
+    cursor:pointer;
+}
+
+div.howtoStep {
+    margin-top: 20px;
+    margin:0 auto;
+}
+
+div#howtoContent {
+    margin:0 auto;
+    display: none;
+}
+
+div.alert {
+    text-align:center;
+}

@@ -1,0 +1,33 @@
+div.thumbnail {
+    width:150px;
+    height:160px;
+    vertical-align:middle;
+    text-align:center;
+}
+
+div.thumbnail a {
+    text-align:center;
+}
+
+div.button {
+    text-align:center;
+    margin:0 auto;
+}
+
+div.price {
+    color:#DD0000;
+    font-weight:bold
+}
+
+div#sonic {
+    text-align:center;
+}
+
+div.pagination {
+    text-align:center;
+    margin:0 auto;
+}
+
+div.notfound {
+    text-align:center;
+}
