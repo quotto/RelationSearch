@@ -24,8 +24,8 @@ end
 gem 'jquery-rails'
 gem 'rake','10.1.0'
 gem 'settingslogic'
-gem 'nokogiri'
 gem 'passenger'
+gem 'nokogiri'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -41,3 +41,5 @@ gem 'passenger'
 
 # To use debugger
 # gem 'ruby-debug'
+
+gem 'therubyracer'
