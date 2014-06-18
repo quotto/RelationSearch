@@ -105,7 +105,7 @@ Pagination.prototype.makeLi = function(pageNumber,activeType) {
         }
         
         if(activeType == "visible") {
-            $li =  $('<li class="'+activeType+'"><a href="javascript:doPagination('+this.pageId+','+pageNumber+')";>'+pageText+'</a></li>');
+            $li =  $('<li class="'+activeType+'"><a name="p'+this.pageId+'-'+pageNumber+'" href="javascript:doPagination('+this.pageId+','+pageNumber+');">'+pageText+'</a></li>');
         } else {
             $li =  $('<li class="'+activeType+'"><a>'+pageText+'</a></li>');           
         }

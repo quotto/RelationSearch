@@ -98,16 +98,13 @@ class SearchesController < ApplicationController
       if param.length > 0 then
         param += "&"
       end
-      if key == "Keywords" then
-        param += "#{key}=#{URI.encode(value,/(?-mix:[^\-_.a-zA-Z\d])/ )}"
-      else
-        param += "#{key}=#{CGI.escape(value)}"
-      end
+      param += "#{key}=#{CGI.escape(value)}"
     end
     request = "GET" + "\n" + "ecs.amazonaws.jp" + "\n" + "/onca/xml" + "\n" + param
-    puts "request:#{request}"
     signature = OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new('sha256'),'GQ4WOIpnOgB5pCi3yJQQYhgAIrbCbwpL9x++CMVl', request)
+    puts "before pack:#{signature}"
     signature = [signature].pack('m').chomp
+    puts "after pack:#{signature}"
     signature = URI.escape(signature, Regexp.new("[+=]"))
     url = "http://ecs.amazonaws.jp/onca/xml?" + param + "&Signature=" + signature
     result = Net::HTTP.get_response(URI::parse(url))

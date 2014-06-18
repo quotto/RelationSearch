@@ -133,7 +133,7 @@ function makeRow($root,level,to) {
 				img_src = "/assets/noimage.jpg";
             }
             var $thumbnail = $('<div class="thumbnail"><a href="' + $item.find('DetailPageURL').text() + '"><img src="' + img_src + '" /></a></div>');
-            var $button = $('<div class="button"><button class="btn-small btn-primary">関連検索</button></div>');
+            var $button = $('<div class="button"><button class="btn-small btn-primary" name="button'+level+'-'+i+'">関連検索</button></div>');
             $button.bind('click',{"level":level + 1,"asin":$item.find('ASIN').text()},
                          function(event){
                             doRelationSearch(event.data.level,event.data.asin);

@@ -2,4 +2,5 @@
 /log/*
 /.bundle/*
 /vendor/bundle/*
-
+/test/*
+/.ruby-version
