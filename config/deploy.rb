@@ -36,6 +36,7 @@ set :repo_url, 'git@github.com:quotto/RelationSearch.git'
    path: "#{fetch(:rbenv_path)}/shims:#{fetch(:rbenv_path)}/bin:$PATH"}
    # path: "/opt/ruby/bin:$PATH" }
  set :bundle_path, "#{fetch :deploy_to}/current/vendor/bundle"
+ set :bundle_without, 'development'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
