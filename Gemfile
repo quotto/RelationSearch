@@ -44,3 +44,6 @@ gem 'nokogiri'
 
 gem 'therubyracer'
 gem 'selenium-webdriver'
+gem 'capistrano'
+gem 'capistrano-rbenv'
+gem 'capistrano-bundler'
