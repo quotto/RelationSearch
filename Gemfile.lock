@@ -147,6 +147,7 @@ DEPENDENCIES
   json
   nokogiri
   passenger
+  rack
   rails (= 4.0.0)
   rake (= 10.1.0)
   sass-rails (~> 4.0.0)
