@@ -35,6 +35,7 @@ set :repo_url, 'git@github.com:quotto/RelationSearch.git'
    rbenv_root: "#{fetch(:rbenv_path)}",
    path: "#{fetch(:rbenv_path)}/shims:#{fetch(:rbenv_path)}/bin:$PATH"}
    # path: "/opt/ruby/bin:$PATH" }
+ set :bundle_path, "#{fetch :deploy_to}/current/vendor/bundle"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
@@ -46,7 +47,8 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
-      execute :tourch, "#{fetch :deploy_to}/tmp/restart.txt"
+      execute :mkdir, "#{fetch :deploy_to}/current/tmp"
+      execute :touch, "#{fetch :deploy_to}/current//tmp/restart.txt"
     end
   end
 
