@@ -4,3 +4,4 @@
 /vendor/bundle/*
 /test/*
 /.ruby-version
+/config/deploy/*
