@@ -5,3 +5,4 @@
 /test/*
 /.ruby-version
 /config/deploy/*
+/public/*

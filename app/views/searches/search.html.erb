@@ -1,5 +1,5 @@
-<%= stylesheet_link_tag('search') %>
-<%= javascript_include_tag('sonic','main','pagination') %>
+<%= stylesheet_link_tag(asset_path 'search',type: :stylesheet) %>
+<%= javascript_include_tag(asset_path('sonic',type: :javascript),asset_path('main',type: :javascript),asset_path('pagination',type: :javascript)) %>
 <%= render 'header' %>
 <div class="container" id="container">
   <%= render 'search_form' %>

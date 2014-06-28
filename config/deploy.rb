@@ -41,6 +41,17 @@ set :repo_url, 'git@github.com:quotto/RelationSearch.git'
 # set :keep_releases, 5
  
 namespace :deploy do
+  namespace :starting do
+    task :clear do
+      execute :rm, "-rf shared/public/assets"
+    end
+    before :check, :clear
+  end
+  
+end
+
+ 
+namespace :deploy do
 
   desc 'Restart application'
   task :restart do
