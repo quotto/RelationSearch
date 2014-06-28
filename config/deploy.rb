@@ -41,13 +41,12 @@ set :repo_url, 'git@github.com:quotto/RelationSearch.git'
 # set :keep_releases, 5
  
 namespace :deploy do
-  namespace :starting do
     task :clear do
-      execute :rm, "-rf shared/public/assets"
+      on roles(:app),in: :sequence, wait: 5 do
+        execute :rm, "-rf shared/public/assets"
+      end
     end
-    before :check, :clear
-  end
-  
+    after :starting, :clear
 end
 
  
@@ -58,7 +57,7 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
-      execute :touch, "#{fetch :deploy_to}/current//tmp/restart.txt"
+      execute :touch, "#{fetch :deploy_to}/current/tmp/restart.txt"
     end
   end
 
